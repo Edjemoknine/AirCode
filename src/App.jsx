@@ -1,11 +1,14 @@
 import Header from "./components/shared/Header"
-import { Button } from "./components/ui/button"
+import Hero from "./components/shared/Hero"
 
 const App = () => {
+
+  
   return (
-    <div className="">
-      <Header/>
-      <Button>Add</Button>
+    <div className="container mx-auto">
+      {/* <Header/> */}
+      <Hero/>
+      
     </div>
   )
 }
