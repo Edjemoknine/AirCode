@@ -15,7 +15,7 @@ const Header = () => {
                     </div>
                     <div className="items-center justify-between hidden gap-12 text-black md:flex">
                         <Link to={"/Home"} className="[&.active]:font-bold text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">Home</Link>
-                        <Link to={"/about"} className="[&.active]:font-bold text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">About</Link>
+                        <Link to={"/about"} className="[&.active]:font-bold text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">Anime</Link>
                         <Link to={"/"} className="[&.active]:font-bold text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">Product</Link>
                         <Link to={"/"} className="[&.active]:font-bold text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="javascript:void(0)">Company</Link>
                     </div>
