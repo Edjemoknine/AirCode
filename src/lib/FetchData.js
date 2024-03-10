@@ -8,7 +8,7 @@ const options = {
 }
 // eslint-disable-next-line no-unused-vars
 export const getAllData =async(page=1)=>{
-    const response=await axios.get(`https://anime-db.p.rapidapi.com/anime?page=1&size=8`,options)
+    const response=await axios.get(`https://anime-db.p.rapidapi.com/anime?page=${page}&size=8`,options)
     const data=await response.data
    return data
 

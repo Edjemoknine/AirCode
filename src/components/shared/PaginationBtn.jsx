@@ -13,7 +13,7 @@ import {
     
 
     return (
-      <Pagination className="mt-6">
+      <Pagination className="mt-10">
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious  href={`?page=${page>1 ?page-1:1}`} />

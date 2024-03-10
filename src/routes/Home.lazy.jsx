@@ -13,14 +13,14 @@ export const Route = createLazyFileRoute('/Home')({
 
 function Home() {
   
-const { data } = useQuery({
+const { data ,isLoading} = useQuery({
   queryKey: ["Animes",1],
   queryFn:()=> getAllData(1),
 });
   return (
     <div className="container mx-auto">
     <Hero/>
-    <AnimeList data={data}/>
+    <AnimeList data={data} isloading={isLoading}/>
     <Products/>
   </div>
   )

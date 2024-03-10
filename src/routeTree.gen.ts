@@ -17,10 +17,16 @@ import { Route as AnimeAnimIdImport } from './routes/anime.$animId'
 
 // Create Virtual Routes
 
+const ProductLazyImport = createFileRoute('/Product')()
 const HomeLazyImport = createFileRoute('/Home')()
 const AboutLazyImport = createFileRoute('/About')()
 
 // Create/Update Routes
+
+const ProductLazyRoute = ProductLazyImport.update({
+  path: '/Product',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/Product.lazy').then((d) => d.Route))
 
 const HomeLazyRoute = HomeLazyImport.update({
   path: '/Home',
@@ -49,6 +55,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HomeLazyImport
       parentRoute: typeof rootRoute
     }
+    '/Product': {
+      preLoaderRoute: typeof ProductLazyImport
+      parentRoute: typeof rootRoute
+    }
     '/anime/$animId': {
       preLoaderRoute: typeof AnimeAnimIdImport
       parentRoute: typeof rootRoute
@@ -61,6 +71,7 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   AboutLazyRoute,
   HomeLazyRoute,
+  ProductLazyRoute,
   AnimeAnimIdRoute,
 ])
 

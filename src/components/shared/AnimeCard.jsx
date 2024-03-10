@@ -8,7 +8,7 @@ import { Link } from "@tanstack/react-router";
 
 const AnimeCard = ({ anime }) => {
 
-  console.log(anime._id)
+  
   return (
     <Card>
       <CardHeader className="bg-slate-100 p-2 ">
